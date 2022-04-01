@@ -172,4 +172,83 @@ function renderRandomSpellTrapCard(card){
 
 //Fetch Random Card//
 
+//Add To Favorites//
+
+let addtoFavorites = document.getElementById('Add_New_Card')
+
+addtoFavorites.addEventListener('submit', addNewCardToFavorites)
+
+function addNewCardToFavorites(e){
+    e.preventDefault()
+
+    if(addtoFavorites.image.value.slice(0, 50) !== "https://storage.googleapis.com/ygoprodeck.com/pics"){
+        alert("Sorry, that's not a card")
+    }else{
+        let card = {
+            "name": addtoFavorites.name.value,
+            "type": addtoFavorites.type.value,
+            "race": addtoFavorites.race.value,
+    
+            "attribute": addtoFavorites.attribute.value,
+            "atk": addtoFavorites.atk.value,
+            "def": addtoFavorites.def.value,
+        
+            "level": addtoFavorites.level.value,
+            "id":  addtoFavorites.id.value,
+            "card_images": [],
+    
+            "desc": addtoFavorites.description.value
+        }   
+
+        let imageURL = {image_url: addtoFavorites.image.value}
+
+        card.card_images.push(imageURL)
+
+        if(sort === 'favorite'){
+            renderNewCard(card)
+        }
+
+        patch(card)
+    
+        addtoFavorites.reset()
+    }
+
+}
+
+function renderNewCard(card){
+    let cardImage = document.createElement('div')
+
+    cardImage.className = `Deck_Image`
+    cardImage.innerHTML = `
+    <img id="${card.name} "src="${card.card_images[0].image_url}" width = "50" height = "50">
+    `
+
+    document.querySelector('#Card_List').appendChild(cardImage)
+
+    let cardData = document.querySelector(`#Card_Data`)
+
+    cardImage.addEventListener('click', function(){
+        document.getElementById("Yu_Gi_Oh_Background").src=`${card.card_images[0].image_url}`
+
+        //Add Card Data//
+
+        cardData.innerHTML = ``
+
+        if(card.atk >= 0){
+            renderMonsterCard(card)
+        }
+
+        if(card.type === "Spell Card" || card.type === "Trap Card"){
+            renderSpellTrapCard(card)
+        }
+
+    })
+}
+
+function emptyDeck(){
+    alert('Select your Duelist!')
+}
+
+//Add To Favorites//
+
 })
