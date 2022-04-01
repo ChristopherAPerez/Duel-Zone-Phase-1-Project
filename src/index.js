@@ -264,4 +264,50 @@ randomButton.addEventListener('click', () => {
 
 //Random Card Button//
 
+//Duelist Buttons//
+
+let cardList = document.querySelector('#Card_List')
+
+let yugi = document.getElementById('Yugi')
+
+yugi.addEventListener('click', () => {
+    sort = 'yugi'
+    cardList.innerHTML = ` `
+    fetchCards("yugi")
+})
+
+let joey = document.getElementById('Joey')
+
+joey.addEventListener('click', () =>{
+    sort = 'joey'
+    cardList.innerHTML = ` `
+    fetchCards("Joey")
+})
+
+let seto = document.getElementById('Seto')
+
+seto.addEventListener('click', () =>{
+    sort = 'seto'
+    cardList.innerHTML = ` `
+    fetchCards("kaiba")
+})
+
+let pegasus = document.getElementById('Pegasus')
+
+pegasus.addEventListener('click', () =>{
+    sort = 'pegasus'
+    cardList.innerHTML = ` `
+    fetchCards("pegasus")
+})
+
+let myFavorites =  document.getElementById('My_Favorite')
+
+myFavorites.addEventListener('click', () =>{
+    sort = 'favorite'
+    cardList.innerHTML = ` `
+    fetchFavorites("myFavorites")
+})
+
+//Duelist Buttons//
+
 })
