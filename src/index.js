@@ -310,4 +310,64 @@ myFavorites.addEventListener('click', () =>{
 
 //Duelist Buttons//
 
+//Duel Zone///////////////////////////////////////////////////////
+
+//Draw Button//
+
+function draw(){
+    fetch(`https://db.ygoprodeck.com/api/v7/randomcard.php`)
+    .then(response => response.json())
+    .then(function(card){
+
+        renderPlayerOneCard(card)        
+
+        fetch(`https://db.ygoprodeck.com/api/v7/randomcard.php`)
+        .then(response => response.json())
+        .then(function(cardtwo){
+        
+        renderPlayerTwoCard(cardtwo)
+
+        setTimeout(() => gameTypeOne(card, cardtwo), 750)
+
+        })
+
+    })
+}
+
+function drawTwo(){
+    fetch(`https://db.ygoprodeck.com/api/v7/randomcard.php`)
+    .then(response => response.json())
+    .then(function(card){
+
+        renderPlayerOneCard(card)        
+
+        fetch(`https://db.ygoprodeck.com/api/v7/randomcard.php`)
+        .then(response => response.json())
+        .then(function(cardtwo){
+        
+        renderPlayerTwoCard(cardtwo)
+
+        setTimeout(() => gameTypeTwo(card, cardtwo), 750)
+
+        })
+
+    })
+}
+
+//Draw Button//
+
+//Render Player Card//
+
+function renderPlayerOneCard(card){
+    document.getElementById("Yu_Gi_Oh_Card_1").src=`${card.card_images[0].image_url}`
+}
+
+function renderPlayerTwoCard(card){
+    document.getElementById("Yu_Gi_Oh_Card_2").src=`${card.card_images[0].image_url}`
+}
+
+//Render Player Card//
+
+
+
 })
