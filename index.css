@@ -277,3 +277,42 @@
 #Duel_Zone_Title_2{
     font-size: 50px;
 }
+
+#Game_Type{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 15px;
+}
+
+#Scoreboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: gold;
+}
+
+#Player_1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-right: 75px;
+}
+
+#Player_2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 75px;
+}
+
+#Dropbox{
+    padding: 25px;
+}
