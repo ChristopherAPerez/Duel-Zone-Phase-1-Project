@@ -483,4 +483,19 @@ dropBox.addEventListener('change', () => {
 
 //Restart Game//
 
+//Patch//
+
+function patch(card){
+    fetch(`http://localhost:3000/myFavorites`, {
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/json',
+            accept: "application/json"
+        },
+        body:JSON.stringify(card)
+    })
+}
+
+//Patch//
+
 })
