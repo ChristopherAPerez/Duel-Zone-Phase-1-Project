@@ -60,6 +60,29 @@ function cardImages(card){
 
 }
 
+function renderMonsterCard(card){
+    let cardInfo = document.createElement('div')
+
+    cardInfo.className = `Monster_Info`
+    cardInfo.innerHTML = `
+    <p>Name: ${card.name}<br>Type: ${card.type}<br>Level: ${card.level}<br>Race: ${card.race}<br>Attribute: ${card.attribute}<br><br>Description: ${card.desc}<br><br>ATK/${card.atk}  DEF/${card.def}
+    `
+
+    document.querySelector('#Card_Data').appendChild(cardInfo)
+}
+
+function renderSpellTrapCard(card){
+    let cardInfo = document.createElement('div')
+    cardInfo.className = `Spell_Trap_Info`
+    cardInfo.innerHTML = `
+    <p>Name: ${card.name}<br>Type: ${card.type}<br>Category: ${card.race}<br><br>Description: ${card.desc}
+    `
+
+    document.querySelector('#Card_Data').appendChild(cardInfo)
+}
+
 //Render Card//
+
+
 
 })
