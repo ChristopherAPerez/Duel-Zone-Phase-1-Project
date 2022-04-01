@@ -498,4 +498,22 @@ function patch(card){
 
 //Patch//
 
+//King of Game//
+
+function kingOfGames(player){
+    alert(`${player} is the King of Games!`)
+
+    player1Win = 0
+    player1Lose = 0
+    player2Win = 0
+    player2Lose = 0
+
+    win1.innerText = player1Win
+    win2.innerText = player2Win
+    lose1.innerText = player1Lose
+    lose2.innerText = player2Lose
+}
+
+//King of Game//
+
 })
