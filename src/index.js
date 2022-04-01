@@ -251,4 +251,17 @@ function emptyDeck(){
 
 //Add To Favorites//
 
+//Random Card Button//
+
+let randomButton = document.getElementById('button')
+
+let discoverCardData = document.getElementById('Discover_Card_Data')
+
+randomButton.addEventListener('click', () => {
+    discoverCardData.innerHTML = ``
+    fetchRandomCard()
+})
+
+//Random Card Button//
+
 })
