@@ -368,6 +368,42 @@ function renderPlayerTwoCard(card){
 
 //Render Player Card//
 
+//Score Keeping//
 
+    let win1 = document.getElementById('win_1')
+let player1Win = parseInt(win1.innerHTML)
+
+let win2 = document.getElementById('win_2')
+let player2Win = parseInt(win2.innerHTML)
+
+let lose1 = document.getElementById('lost_1')
+let player1Lose = parseInt(lose1.innerHTML)
+
+let lose2 = document.getElementById('lost_2')
+let player2Lose = parseInt(lose2.innerHTML)
+
+function playerWin(player){
+    if(player === "Player 1"){
+        win1.innerText = ++player1Win
+    } else if(player === "Player 2"){
+        win2.innerText = ++player2Win
+    }
+
+    if(player1Win === 3 || player2Win === 3){
+
+        setTimeout(() => kingOfGames(player), 750)
+
+    }
+}
+
+function playerLose(player){
+    if(player === "Player 1"){
+        lose1.innerText = ++player1Lose
+    } else{
+        lose2.innerText = ++player2Lose
+    }
+}
+
+//Score Keeping//
 
 })
