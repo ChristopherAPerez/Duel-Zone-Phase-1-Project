@@ -253,3 +253,27 @@
     border-radius: 25px;
 
 }
+
+.Random_Monster_Info_{
+    padding-left: 5px;
+}
+
+.Random_Spell_Trap_Info{
+    padding-left: 5px;
+}
+
+#Duel_Zone{
+    padding-top: 5px;
+
+}
+
+#Title_Two{
+    text-align: center;
+    font-size: 25px;
+
+    color: gold;
+}
+
+#Duel_Zone_Title_2{
+    font-size: 50px;
+}
