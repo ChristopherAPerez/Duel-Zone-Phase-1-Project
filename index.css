@@ -197,3 +197,59 @@
     justify-content: space-between;
     align-items: center;
 }
+
+#Discover_Yu_Gi_Oh_Background{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+#Discover_Card_Data{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border:3px solid;
+    border-image-slice: 1;
+
+    border-image-source: linear-gradient(to left, gold, red);
+
+    width: 50%;
+    color: Gold;
+    background-color: black;
+    min-height: 250px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#Random_Button{
+    padding-top: 30px;
+    min-height: 50px;
+}
+
+#button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: black;
+    color: gold;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+#button_2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: black;
+    color: gold;
+    border: 5px solid black;
+    border-radius: 25px;
+
+}
