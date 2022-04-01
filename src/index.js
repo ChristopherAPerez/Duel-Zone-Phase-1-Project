@@ -83,6 +83,93 @@ function renderSpellTrapCard(card){
 
 //Render Card//
 
+//Fetch Random Card//
 
+function fetchRandomCard(){
+    fetch(`https://db.ygoprodeck.com/api/v7/randomcard.php`)
+    .then(response => response.json())
+    .then(function(card){
+
+        renderRandomCard(card)
+
+        if(card.atk >= 0){
+            renderRandomMonsterCard(card)
+        }
+
+        if(card.type === "Spell Card" || card.type === "Trap Card"){
+            renderRandomSpellTrapCard(card)
+        }
+
+        let addNewCard = document.getElementById('Add_New_Card')
+        let retrieveData = document.getElementById('button_2')
+
+        retrieveData.addEventListener('click', (e) => {
+
+            if(card.atk >= 0){
+
+                addNewCard.name.value = card.name
+                addNewCard.type.value = card.type
+                addNewCard.race.value = card.race
+
+                addNewCard.attribute.value = card.attribute
+                addNewCard.atk.value = card.atk
+                addNewCard.def.value = card.def
+            
+                addNewCard.level.value = card.level
+                addNewCard.id.value = card.id
+                addNewCard.image.value = card.card_images[0].image_url
+
+                addNewCard.description.value = card.desc
+
+            }
+
+            if(card.type === "Spell Card" || card.type === "Trap Card"){
+
+                addNewCard.name.value = card.name
+                addNewCard.type.value = card.type
+                addNewCard.race.value = card.race
+
+                addNewCard.attribute.value = ``
+                addNewCard.atk.value = ``
+                addNewCard.def.value = ``
+            
+                addNewCard.level.value = ``
+                addNewCard.id.value = card.id
+                addNewCard.image.value = card.card_images[0].image_url
+
+                addNewCard.description.value = card.desc
+
+            }
+
+        })
+    })
+}
+
+function renderRandomCard(card){
+    document.getElementById("Discover_Yu_Gi_Oh_Background").src=`${card.card_images[0].image_url}`
+}
+
+function renderRandomMonsterCard(card){
+    let cardInfo = document.createElement('div')
+
+    cardInfo.className = `Random_Monster_Info`
+    cardInfo.innerHTML = `
+    <p>Name: ${card.name}<br>Type: ${card.type}<br>Level: ${card.level}<br>Race: ${card.race}<br>Attribute: ${card.attribute}<br><br>Description: ${card.desc}<br><br>ATK/${card.atk}  DEF/${card.def}
+    `
+
+    document.querySelector('#Discover_Card_Data').appendChild(cardInfo)
+}
+
+function renderRandomSpellTrapCard(card){
+    let cardInfo = document.createElement('div')
+    cardInfo.className = `Random_Spell_Trap_Info`
+    cardInfo.innerHTML = `
+    <p>Name: ${card.name}<br>Type: ${card.type}<br>Category: ${card.race}<br><br>Description: ${card.desc}
+    `
+
+    document.querySelector('#Discover_Card_Data').appendChild(cardInfo)
+}
+
+//Fetch Random Card//
 
 })
