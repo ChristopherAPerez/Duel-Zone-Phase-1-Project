@@ -56,3 +56,36 @@
     align-items: center;
     padding: 4px;
 }
+
+#Container_4{
+    padding: 2px;
+}
+
+#submit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: Black;
+    color: red;
+    border: 1px solid red;
+    border-radius: 25px;
+}
+
+#Name, #Type, #Atk, #Def, #Image, #Level, #Race, #Attribute, #ID{
+    width: 32%;
+    padding: 2px;
+
+    background-color: Black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 3px;
+}
+
+.nav{
+    background: black;
+    padding: 5px;
+
+    border: 1px solid gold;
+    border-radius: 25px;
+}
