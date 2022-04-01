@@ -1,0 +1,30 @@
+#Body{
+    background: red;
+    background-image: linear-gradient(to right, gold, red);
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 91%;
+}
+
+#bottom{
+    left: 0; right: 0;
+    height: 10px;
+}
+
+#bottom { bottom: 0; }
+
+#Body_Border{
+    background: black;
+    width: 100%;
+
+    min-height: 615px;
+    overflow: hidden;
+
+
+    border: 1px solid black;
+    border-radius: 30px;
+    
+}
