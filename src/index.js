@@ -370,7 +370,7 @@ function renderPlayerTwoCard(card){
 
 //Score Keeping//
 
-    let win1 = document.getElementById('win_1')
+let win1 = document.getElementById('win_1')
 let player1Win = parseInt(win1.innerHTML)
 
 let win2 = document.getElementById('win_2')
@@ -405,5 +405,62 @@ function playerLose(player){
 }
 
 //Score Keeping//
+
+//Button Clicked//
+
+    let duelZone = document.getElementById('Duel_Zone')
+
+duelZone.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    if(e.target.Game_Type.value === "Monster, Spell, Trap!"){
+        drawTwo()
+    }else if(e.target.Game_Type.value === "Draw Battle!"){
+        draw()
+    }
+    
+})
+
+function gameTypeOne(cardOne, cardTwo){
+    if(cardOne.type === "Spell Card" || cardOne.type === "Trap Card" || cardTwo.type === "Spell Card" || cardOne.type === "Trap Card"){
+        alert("Draw Again!")
+    }else if(cardOne.atk > 0 && cardTwo.atk > 0){
+        if(cardOne.atk > cardTwo.atk){
+            playerLose("Player 2")
+            playerWin("Player 1")
+        } else if(cardTwo.atk > cardOne.atk){
+            playerLose("Player 2")
+            playerWin("Player 1")
+        } else{
+            alert(`It's a tie! Draw again, Duelists!`)
+        }
+    }
+}
+
+function gameTypeTwo(cardOne, cardTwo){
+    if(cardOne.type.slice(cardOne.type.length -7) === "Monster" && cardTwo.type === "Spell Card"){
+        playerLose("Player 2")
+        playerWin("Player 1")
+    }else if(cardOne.type.slice(cardOne.type.length -7) === "Monster" && cardTwo.type === "Trap Card"){
+        playerLose("Player 1")
+        playerWin("Player 2")
+    }else if(cardOne.type === "Spell Card" && cardTwo.type.slice(cardTwo.type.length -7) === "Monster"){
+        playerLose("Player 1")
+        playerWin("Player 2")
+    }else if(cardOne.type === "Spell Card" && cardTwo.type === "Trap Card"){
+        playerLose("Player 2")
+        playerWin("Player 1")
+    }else if(cardOne.type === "Trap Card" && cardTwo.type.slice(cardTwo.type.length -7) === "Monster"){
+        playerLose("Player 2")
+        playerWin("Player 1")
+    }else if(cardOne.type === "Trap Card" && cardTwo.type === "Spell Card"){
+        playerLose("Player 1")
+        playerWin("Player 2")
+    }else{
+        alert("Draw Again!")
+    }
+}
+
+//Button Clicked//
 
 })
