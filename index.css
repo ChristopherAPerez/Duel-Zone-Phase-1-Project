@@ -89,3 +89,38 @@
     border: 1px solid gold;
     border-radius: 25px;
 }
+
+#Description_Container{
+    padding: 7px;
+}
+
+#Description{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 45%;
+    min-height: 100px;
+    padding: 4px;
+
+    background-color: Black;
+    color: Gold;
+    border: 1px solid gold;
+    border-radius: 3px;
+}
+
+#Duelists{
+    display: flex;
+    color: Gold;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+#Highlighted_Cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+
+    padding: 5px;
+}
