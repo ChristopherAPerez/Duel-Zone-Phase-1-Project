@@ -159,3 +159,41 @@
     overflow: hidden;
     padding: 10px;
 }
+
+.Deck_Image{
+    float: left;
+    padding: 6px;
+}
+
+#Space{
+    display: inline-block;
+    margin: 0; 
+    text-align: center;
+}
+
+#Discover_Background{
+
+    background-image: linear-gradient(to right, gold, red);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: black;
+    padding-bottom: 10px;
+}
+
+#Title_One{
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+#Discover_Title{
+    font-size: 60px;
+}
+
+#Discover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
