@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+let trigger = false
+let sort = 'empty'
+
 //Fetch Cards//
 
     function fetchCards(name){
         fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?&cardset=Starter%20Deck%3A%20${name}`)
         .then(response => response.json())
-        .then(cardData => cardData.forEach(function(card){
-            renderCard(card)
-        }))
+        .then(function(cardData){
+            let cardList = cardData.data
+            for(let card of cardList){
+                renderCard(card)
+            }
+        })
     }
 
     function fetchFavorites(fav){
@@ -24,12 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderCard(card){
 
-    cardImages(card)
-
-}
-
-function cardImages(card){
-
     let cardImage = document.createElement('div')
 
     cardImage.className = `Deck_Image`
@@ -44,7 +44,6 @@ function cardImages(card){
     cardImage.addEventListener('click', function(){
 
         document.getElementById("Yu_Gi_Oh_Background").src=`${card.card_images[0].image_url}`
-
 
         cardData.innerHTML = ``
 
@@ -229,8 +228,6 @@ function renderNewCard(card){
 
     cardImage.addEventListener('click', function(){
         document.getElementById("Yu_Gi_Oh_Background").src=`${card.card_images[0].image_url}`
-
-        //Add Card Data//
 
         cardData.innerHTML = ``
 
