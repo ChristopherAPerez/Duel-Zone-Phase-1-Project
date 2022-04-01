@@ -408,7 +408,7 @@ function playerLose(player){
 
 //Button Clicked//
 
-    let duelZone = document.getElementById('Duel_Zone')
+let duelZone = document.getElementById('Duel_Zone')
 
 duelZone.addEventListener('submit', function(e){
     e.preventDefault()
@@ -462,5 +462,25 @@ function gameTypeTwo(cardOne, cardTwo){
 }
 
 //Button Clicked//
+
+//Restart Game//
+
+let dropBox = document.getElementById('Game_Type')
+
+dropBox.addEventListener('change', () => {
+
+    player1Win = 0
+    player1Lose = 0
+    player2Win = 0
+    player2Lose = 0
+
+    win1.innerText = player1Win
+    win2.innerText = player2Win
+    lose1.innerText = player1Lose
+    lose2.innerText = player2Lose
+
+})
+
+//Restart Game//
 
 })
