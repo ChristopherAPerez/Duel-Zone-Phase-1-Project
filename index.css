@@ -124,3 +124,38 @@
 
     padding: 5px;
 }
+
+#Card_List{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border:2px solid Gold;
+    border-radius: 5px;
+    width: 38%;
+    min-height: 528px;
+    overflow: hidden;
+}
+
+#Yu_Gi_Oh_Background{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 20%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#Card_Data{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 30%;
+    color: Gold;
+    border:2px solid red;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+}
