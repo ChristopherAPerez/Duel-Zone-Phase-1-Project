@@ -20,4 +20,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Fetch Cards//
 
+//Render Card//
+
+function renderCard(card){
+
+    cardImages(card)
+
+}
+
+function cardImages(card){
+
+    let cardImage = document.createElement('div')
+
+    cardImage.className = `Deck_Image`
+    cardImage.innerHTML = `
+    <img id="${card.name} "src="${card.card_images[0].image_url}" width = "50" height = "50">
+    `
+
+    document.querySelector('#Card_List').appendChild(cardImage)
+
+    let cardData = document.querySelector(`#Card_Data`)
+
+    cardImage.addEventListener('click', function(){
+
+        document.getElementById("Yu_Gi_Oh_Background").src=`${card.card_images[0].image_url}`
+
+
+        cardData.innerHTML = ``
+
+        if(card.atk >= 0){
+            renderMonsterCard(card)
+        }
+
+        if(card.type === "Spell Card" || card.type === "Trap Card"){
+            renderSpellTrapCard(card)
+        }
+
+    })
+
+}
+
+//Render Card//
+
 })
