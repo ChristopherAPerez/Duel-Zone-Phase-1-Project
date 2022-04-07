@@ -1,9 +1,9 @@
 # Duel-Zone-Phase-1-Project
 
-![](images/screenShot.png) 
-
 ## Overview
 This application introduces users to the Yu-Gi-Oh! Trading Card Game original four starter decks. It also grants users the ability to browse through Yu-Gi-Oh!'s library at random and favorite cards. And finally, users can play mini-games, keep score, and be crowned King of Games!
+
+![](images/Gif_App.gif) 
 
 ## Features and Description
 - Navigate through starter sets and favorites, and on-click loads images of cards included in selected sets or favorited.
