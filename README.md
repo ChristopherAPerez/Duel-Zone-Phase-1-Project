@@ -2,7 +2,7 @@
 
 ![](images/screenShot.png) 
 
-LIVE LINK: []https://youtu.be/W8YZ4vwyx0A
+LIVE LINK: https://youtu.be/W8YZ4vwyx0A
 
 ## Overview
 
