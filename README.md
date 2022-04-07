@@ -7,6 +7,9 @@ This application introduces users to the Yu-Gi-Oh! Trading Card Game original fo
 
 ## Features and Description
 - Navigate through starter sets and favorites, and on-click loads images of cards included in selected sets or favorited.
+
+![](images/Gif_App_Click1.gif) 
+
 - Clicking on images loads larger images and a description of the card.
 - Buttons, when clicked, load a random card from the Yu-Gi-Oh! Collection and retrieve information for the form.
 - Submit form lets users add new cards to the 'Favorites' library.
